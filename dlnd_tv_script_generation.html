@@ -13359,16 +13359,16 @@ jerry: do you know what this is all about? do you know, why were here? to be out
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
     <span class="n">tokens</span> <span class="o">=</span> <span class="p">{}</span> 
-    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||Exclamation_Mark||&#39;</span>
-    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;,&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||Comma||&#39;</span> 
-    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;&quot;&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||Quotation_Mark||&#39;</span>
-    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;;&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||Semicolon||&#39;</span>
-    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;!&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||Exclamation_Mark||&#39;</span>
-    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;?&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||Question_Mark||&#39;</span>
-    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;(&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||Left_Parantheses||&#39;</span>
-    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||Right_Parantheses||&#39;</span>
-    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||Dash||&#39;</span>
-    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||Return||&#39;</span>
+    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||PERIOD||&#39;</span>
+    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;,&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||COMMA||&#39;</span> 
+    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;&quot;&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||QUOTATION_MARK||&#39;</span>
+    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;;&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||SEMICOLON||&#39;</span>
+    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;!&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||EXCLAMATION_MARK||&#39;</span>
+    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;?&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||QUESTION_MARK||&#39;</span>
+    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;(&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||LEFT_PARENTHESES||&#39;</span>
+    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||RIGHT_PARENTHESES||&#39;</span>
+    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||DASH||&#39;</span>
+    <span class="n">tokens</span><span class="p">[</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;||NEW_LINE||&#39;</span>
     <span class="k">return</span> <span class="n">tokens</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -13542,7 +13542,7 @@ sequence_length = 4</code></pre>
         <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y_batch</span><span class="p">)</span>
     
     <span class="n">data</span> <span class="o">=</span> <span class="n">TensorDataset</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
-    <span class="n">data_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">)</span>
+    <span class="n">data_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">)</span>
     <span class="c1"># return a dataloader</span>
     <span class="k">return</span> <span class="n">data_loader</span>
 
@@ -13693,7 +13693,6 @@ out = output[:, -1]</code></pre>
         <span class="bp">self</span><span class="o">.</span><span class="n">embed</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">LSTM</span><span class="p">(</span><span class="n">embedding_dim</span><span class="p">,</span> <span class="n">hidden_dim</span><span class="p">,</span> <span class="n">n_layers</span><span class="p">,</span> <span class="n">dropout</span> <span class="o">=</span> <span class="n">dropout</span><span class="p">,</span> <span class="n">batch_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fc</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_dim</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nn_input</span><span class="p">,</span> <span class="n">hidden</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Forward propagation of the neural network</span>
@@ -13708,8 +13707,7 @@ out = output[:, -1]</code></pre>
         <span class="n">embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="n">nn_input</span><span class="p">)</span>
         <span class="n">lstm_output</span><span class="p">,</span> <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span><span class="p">(</span><span class="n">embeddings</span><span class="p">,</span> <span class="n">hidden</span><span class="p">)</span>
         <span class="n">lstm_output</span> <span class="o">=</span> <span class="n">lstm_output</span><span class="o">.</span><span class="n">contiguous</span><span class="p">()</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">)</span>
-        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">lstm_output</span><span class="p">)</span>
-        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc</span><span class="p">(</span><span class="n">lstm_output</span><span class="p">)</span>
         <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_size</span><span class="p">)</span>
         <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
@@ -13963,7 +13961,7 @@ out = output[:, -1]</code></pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Training parameters</span>
 <span class="c1"># Number of Epochs</span>
-<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="c1"># Learning Rate</span>
 <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span>
 
@@ -13980,7 +13978,7 @@ out = output[:, -1]</code></pre>
 <span class="n">n_layers</span> <span class="o">=</span> <span class="mi">2</span>
 
 <span class="c1"># Show stats for every n number of batches</span>
-<span class="n">show_every_n_batches</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">show_every_n_batches</span> <span class="o">=</span> <span class="mi">5000</span>
 </pre></div>
 
     </div>
@@ -14001,7 +13999,7 @@ out = output[:, -1]</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -14039,7 +14037,7 @@ out = output[:, -1]</code></pre>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Training for 10 epoch(s)...
+<pre>Training for 15 epoch(s)...
 </pre>
 </div>
 </div>
@@ -14061,127 +14059,36 @@ out = output[:, -1]</code></pre>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch:    1/10    Loss: 5.2690605962276456
+<pre>Epoch:    1/15    Loss: 4.624147159910202
 
-Epoch:    1/10    Loss: 4.68792497587204
+Epoch:    2/15    Loss: 4.06634401474426
 
-Epoch:    1/10    Loss: 4.641046623468399
+Epoch:    3/15    Loss: 3.7790384122547955
 
-Epoch:    1/10    Loss: 4.5060186553001405
+Epoch:    4/15    Loss: 3.6144701334830676
 
-Epoch:    1/10    Loss: 4.381023815870285
+Epoch:    5/15    Loss: 3.4952300793473126
 
-Epoch:    1/10    Loss: 4.472556504249573
+Epoch:    6/15    Loss: 3.4039792979283665
 
-Epoch:    2/10    Loss: 4.304106386938716
+Epoch:    7/15    Loss: 3.335921376122399
 
-Epoch:    2/10    Loss: 4.048734008312225
+Epoch:    8/15    Loss: 3.2781979280142233
 
-Epoch:    2/10    Loss: 4.143925569534302
+Epoch:    9/15    Loss: 3.229857306153301
 
-Epoch:    2/10    Loss: 4.079572384357452
+Epoch:   10/15    Loss: 3.19008605741606
 
-Epoch:    2/10    Loss: 4.0145098919868465
+Epoch:   11/15    Loss: 3.156353584934458
 
-Epoch:    2/10    Loss: 4.143623510599136
+Epoch:   12/15    Loss: 3.1253375686816316
 
-Epoch:    3/10    Loss: 4.06536773755783
+Epoch:   13/15    Loss: 3.0976993091892018
 
-Epoch:    3/10    Loss: 3.867958581209183
+Epoch:   14/15    Loss: 3.0766906458392618
 
-Epoch:    3/10    Loss: 3.976668497800827
+Epoch:   15/15    Loss: 3.0554776559535726
 
-Epoch:    3/10    Loss: 3.932807382106781
-
-Epoch:    3/10    Loss: 3.8677149865627287
-
-Epoch:    3/10    Loss: 4.0009792478084565
-
-Epoch:    4/10    Loss: 3.9394435539720503
-
-Epoch:    4/10    Loss: 3.762089770078659
-
-Epoch:    4/10    Loss: 3.879115921974182
-
-Epoch:    4/10    Loss: 3.8365008890628816
-
-Epoch:    4/10    Loss: 3.7768229835033416
-
-Epoch:    4/10    Loss: 3.9115855746269226
-
-Epoch:    5/10    Loss: 3.8565918334373612
-
-Epoch:    5/10    Loss: 3.6959564290046694
-
-Epoch:    5/10    Loss: 3.8043924865722656
-
-Epoch:    5/10    Loss: 3.769921649456024
-
-Epoch:    5/10    Loss: 3.717091496229172
-
-Epoch:    5/10    Loss: 3.8453063719272613
-
-Epoch:    6/10    Loss: 3.7953751405807044
-
-Epoch:    6/10    Loss: 3.6445579121112823
-
-Epoch:    6/10    Loss: 3.748727971315384
-
-Epoch:    6/10    Loss: 3.7191211960315704
-
-Epoch:    6/10    Loss: 3.6626072301864623
-
-Epoch:    6/10    Loss: 3.7972116727828977
-
-Epoch:    7/10    Loss: 3.7467857473264865
-
-Epoch:    7/10    Loss: 3.6064379529953
-
-Epoch:    7/10    Loss: 3.710823205471039
-
-Epoch:    7/10    Loss: 3.6816903614997862
-
-Epoch:    7/10    Loss: 3.6217751309871673
-
-Epoch:    7/10    Loss: 3.759927930355072
-
-Epoch:    8/10    Loss: 3.709979652510426
-
-Epoch:    8/10    Loss: 3.574119359254837
-
-Epoch:    8/10    Loss: 3.6773640456199645
-
-Epoch:    8/10    Loss: 3.6474025361537934
-
-Epoch:    8/10    Loss: 3.590868181228638
-
-Epoch:    8/10    Loss: 3.7201134474277495
-
-Epoch:    9/10    Loss: 3.682835388110905
-
-Epoch:    9/10    Loss: 3.550396334409714
-
-Epoch:    9/10    Loss: 3.6492353718280794
-
-Epoch:    9/10    Loss: 3.621756299495697
-
-Epoch:    9/10    Loss: 3.5586777453422545
-
-Epoch:    9/10    Loss: 3.690586050271988
-
-Epoch:   10/10    Loss: 3.656134981692322
-
-Epoch:   10/10    Loss: 3.530810228586197
-
-Epoch:   10/10    Loss: 3.627782077550888
-
-Epoch:   10/10    Loss: 3.600551729440689
-
-Epoch:   10/10    Loss: 3.5353866472244264
-
-Epoch:   10/10    Loss: 3.66633376121521
-
-Model Trained and Saved
 </pre>
 </div>
 </div>
@@ -14194,6 +14101,17 @@ Model Trained and Saved
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/opt/conda/lib/python3.6/site-packages/torch/serialization.py:193: UserWarning: Couldn&#39;t retrieve source code for container of type RNN. It won&#39;t be checked for correctness upon loading.
   &#34;type &#34; + obj.__name__ + &#34;. It won&#39;t be checked &#34;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Model Trained and Saved
 </pre>
 </div>
 </div>
@@ -14214,8 +14132,9 @@ Model Trained and Saved
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> (Write answer, here)</p>
-<p>I first tried a large sequence length of 50 and trained for 5 epochs. The final loss was around 4, I was trying to get an intuition of the hyperparameers I would need to be efficient. From the hyperparameter lesson I learnt that having a small minibatch helped with accuracy so I decided to go with a 128 and train for many epochs instead of a large number that would be computationally taxing.</p>
-<p>I figured 120 embedding dim would be enough to learn and since when the hidden dimensions are bigger than the inputs the model learns best I went on and used 160. for the learning rate I found that 0.001 on the Adam optimizer is a sweet spot for me.</p>
+<p>I started with a lot of failures and I struggled a lot to get under the 3.5 benchmark. I tried a lot of sequence lengths, I first thought that a big sequence length was going to help me since my model is learning a lot more. I started with a sequence lenght of 50, embedding and hidden dimensions of 300 and 350 respectively, and this was not a good idea since it was taking for ever to train.</p>
+<p>after a lot of trial and error, I came to the conclusion that a sequence length between 10 and 20 was giving me the best results and I went with 15. the 300 embedding dimensions nad 350 hidden dimensions were also too big so I reduced them both by a hundred to be able to learn and at the same time not be too taxing.</p>
+<p>for the batch size, I found that a very big batch size was not helping me because the results were just not justifying the training times, I found a sweet spot at 128. I went as low as 100 and as high as 250.</p>
 
 </div>
 </div>
@@ -14231,7 +14150,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -14261,7 +14180,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -14356,7 +14275,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run the cell multiple times to get different results!</span>
@@ -14385,7 +14304,7 @@ Model Trained and Saved
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/opt/conda/lib/python3.6/site-packages/ipykernel_launcher.py:39: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters().
+<pre>/opt/conda/lib/python3.6/site-packages/ipykernel_launcher.py:38: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters().
 </pre>
 </div>
 </div>
@@ -14396,67 +14315,88 @@ Model Trained and Saved
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>jerry:.
+<pre>jerry:, and i was employed articulate.
 
-elaine: oh yeah. you know what the hell is it?.
+hoyt: you know, i think i could do this.
 
-hoyt: you have to tell me, i think i should have a little more more than that. i mean, i was just in this country. i think that would be.
+hoyt: i think you should be bleak- talker--
 
-hoyt: i know what you think.
-
-jerry: i don&#39;t think it&#39;s the only thing i could get.
-
-jerry: i got to talk to you?
-
-elaine: no, that&#39;s not the same thing to do.
-
-jerry: i don&#39;t know.
-
-george: you want to go?
-
-jerry: i was thinking about the same thing to be
-
-jerry:(looking at her face) oh, no, no. i think we were going to be the whole thing for me.
-
-george: you know, this whole thing was a long thing i have to tell you, and i don&#39;t know what i was.
-
-jerry: you know, i don&#39;t want to be able to get the whole time. i got to tell him what. you know what this is going to have?
-
-jerry: you know, this is a big deal. i was thinking about that.
-
-hoyt: you know what the means is going out of the middle of that?
-
-jerry: i can&#39;t do it.
-
-jerry: what?
-
-george: you have a big deal.
-
-jerry: what happened?
+jerry: no.
 
 hoyt: what?
 
-jerry: no. i can&#39;t.
+[new witness: police detective]
 
-george: you know, the whole thing has been a big deal.
+hoyt: so, how was that jury?
 
-chiles: no- no.
+george: i don&#39;t want to worry about it.
 
-hoyt: i got to get this thing.
+elaine: oh.
 
-jerry: oh.
+hoyt: well, what do you think?
 
-vandelay: jerry, jerry?
+jerry: because, i was in snitzer&#39;s bakery, and you know, the law is not merely trial as restrained jubilation.
 
-jerry:(to elaine) hey, hey, you know, i gotta get a little-- it&#39;s not going to be.
+[new witness: pharmacist rivera parked on the sauna and the jury. ]
 
-[new witness: jerry&#39;s apartment]
+hoyt: what happened to you?
 
-jerry: you know what?
+sidra: moors- talker!
 
-jerry:(sarcastic) i think i could have gotten a call to tell her to get the same.
+jerry: what happened?
 
-george:
+[new witness: witness: 7th bisque&#34;
+
+hoyt: objection overruled. thick nazi thick. ]
+
+vandelay: objection overruled...
+
+vandelay: objection overruled, essentially?
+
+bookman: i know.
+
+vandelay: well you know, i just wanted to talk to you about this.
+
+george:(unenthusiastic.) oh, hi.
+
+hoyt: hi.
+
+[new witness: hello?
+
+hoyt: the other night, the prosecution has built in deliberation a district manual.
+
+jerry: oh, yeah.
+
+[new witness: security guard
+
+hoyt: and jane, its the only one that could be swarming to prove.
+
+hoyt: oh, i think so, i got to call jill. jill, i think i would be able to go see the longest.
+
+george: so you think resonated could&#39;ve hunt a video.
+
+jerry: i know.
+
+[new witness: police detective]
+
+hoyt: and you dont want to spell your puffy boyfriend in a plane interview.
+
+jerry: so, how did i do that?
+
+jerry: no, no, not.
+
+george: what happened?
+
+sidra: no.
+
+[new witness: police detective]
+
+chiles: state?
+
+bookman: oh, hi.
+
+hoyt: hello? what?
+
 </pre>
 </div>
 </div>
@@ -14475,7 +14415,7 @@ george:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># save script to a text file</span>
